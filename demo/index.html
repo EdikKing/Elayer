@@ -1,0 +1,97 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>侧滑测试</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+
+    <link href="//cdn.bootcss.com/amazeui/2.7.2/css/amazeui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../disk/Elayer.css">
+
+</head>
+<body>
+
+<div class="am-container" style="padding-top: 200px">
+    <div class="am-u-lg-12">
+        <button type="button" onclick="openHTML()" class="am-btn am-btn-primary">添加HTML方式</button>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="am-u-lg-12">
+        <button type="button" onclick="openiframe()" class="am-btn am-btn-primary">iframe方式打开</button>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="am-u-lg-12">
+        <button type="button" onclick="openin()" class="am-btn am-btn-primary">内联方式打开</button>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="am-u-lg-12">
+        <button type="button" onclick="openleft()" class="am-btn am-btn-primary">从左侧滑出</button>
+    </div>
+
+    <!-- 测试内联 -->
+    <div id="inner" style="display: none">
+        <div>
+            我是内联侧滑测试
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+<script src="../disk/Elayer.js"></script>
+
+<script>
+    function openHTML() {
+        Elayer({
+            url  : "/Elayer/demo/pages/html.html",
+            type : "open",
+            width: "600px"
+        });
+    }
+
+    function openiframe() {
+        Elayer({
+            url  : "/Elayer/demo/pages/iframe.html",
+            type : "iframe",
+            width: "600px"
+        });
+    }
+
+    function openin() {
+        Elayer({
+            type : "#inner",
+            width: "600px"
+        });
+    }
+
+    function openleft() {
+        Elayer({
+            type : "#inner",
+            width: "600px",
+            direction: 'left'
+        });
+    }
+
+</script>
+
+</body>
+</html>

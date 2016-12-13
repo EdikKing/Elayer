@@ -59,8 +59,7 @@
         }
     };
     var last=function (mask,portal,options) {
-        //绑定事件
-        bindEvent(mask,portal,options);
+
         if(options.type == 'open'){
             load(portal,options.url);
         }else if(options.type == 'iframe'){
@@ -68,6 +67,8 @@
         }else{
             portal.append($(options.type).html());
         }
+        //绑定事件
+        bindEvent(mask,portal,options);
     }
     var load=function (portal,url) {
         if(url.indexOf("?") != -1){
